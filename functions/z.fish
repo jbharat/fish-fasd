@@ -1,6 +1,3 @@
-function z
-    set -l tgt_dir (fasd -dlR | fzf --height 50% --reverse)
-    if [ (echo $tgt_dir) ]
-        cd $tgt_dir
-    end
+function z -d "cd, same functionality as j in autojump"
+  fasd_cd -d $argv
 end
